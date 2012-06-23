@@ -17,7 +17,7 @@
   <%= f.submit %>
 <% end %>
 
-<table>
+<table id="items">
   <thead>
     <tr>
       <th>Type ID</th>
@@ -27,7 +27,7 @@
   </thead>
   <tbody>
     <% @items.each do |item| %>
-      <tr>
+      <tr id="<%= dom_id item %>">
         <td><%= item.type_id %></td>
         <td><%= item.name %></td>
         <td><%= item.value %></td>
