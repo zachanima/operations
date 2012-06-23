@@ -13,8 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-<<<<<<< HEAD
 
 /config/database.yml
-=======
->>>>>>> 6e7d3b56314bee1b750ca2811c846778bc674c0a
+
+*.swp
