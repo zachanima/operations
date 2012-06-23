@@ -1,0 +1,37 @@
+<h1>New item</h1>
+<%= form_for @item do |f| %>
+  <ol>
+    <li>
+      <%= f.label :type_id, 'Type ID', class: 'required' %>
+      <%= f.number_field :type_id %>
+    </li>
+    <li>
+      <%= f.label :name, class: 'required' %>
+      <%= f.text_field :name %>
+    </li>
+    <li>
+      <%= f.label :value %>
+      <%= f.number_field :value %>
+    </li>
+  </ol>
+  <%= f.submit %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type ID</th>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.type_id %></td>
+        <td><%= item.name %></td>
+        <td><%= item.value %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

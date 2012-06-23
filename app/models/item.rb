@@ -25,7 +25,7 @@ class Item < ActiveRecord::Base
       value << item.to_s.gsub(/[^0-9\.]/, '').to_f
     end
 
-    buy.each_index do |i|
+    value.each_index do |i|
       item = Item.find_by_type_id(items[i])
       item.value = value[i]
       item.save
