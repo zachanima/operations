@@ -20,6 +20,7 @@
 <table id="items">
   <thead>
     <tr>
+      <th />
       <th>Type ID</th>
       <th>Name</th>
       <th>Value</th>
@@ -28,6 +29,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr id="<%= dom_id item %>">
+        <td><%= image_tag item.image %>
         <td><%= item.type_id %></td>
         <td><%= item.name %></td>
         <td><%= item.value %></td>

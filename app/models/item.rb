@@ -33,4 +33,8 @@ class Item < ActiveRecord::Base
       item.touch
     end
   end
+
+  def image
+    "http://image.eveonline.com/Type/#{self.type_id}_32.png"
+  end
 end
